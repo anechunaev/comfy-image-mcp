@@ -1,0 +1,8 @@
+{
+  "1": { "class_type": "LoadImage", "inputs": { "image": "{{REF_IMAGE}}" } },
+  "2": { "class_type": "LoadImage", "inputs": { "image": "{{REF_IMAGE_2}}" } },
+  "3": { "class_type": "TextEncodeQwenImageEditPlus", "inputs": { "prompt": "{{PROMPT}}", "image1": ["1", 0], "image2": ["2", 0] } },
+  "7": { "class_type": "EmptySD3LatentImage", "inputs": { "width": "{{WIDTH}}", "height": "{{HEIGHT}}", "batch_size": 1 } },
+  "8": { "class_type": "KSampler", "inputs": { "seed": "{{SEED}}" } },
+  "10": { "class_type": "SaveImage", "inputs": { "filename_prefix": "{{FILENAME_PREFIX}}" } }
+}
